@@ -15,4 +15,10 @@ COPY ./wp-config.php ./var/www/wordpress/
 
 RUN mkdir ./run/php/
 
-CMD ./usr/sbin/php-fpm7.3 -F
+WORKDIR /var/www/wordpress
+
+COPY /start.sh /
+
+RUN		chmod 777 /start.sh
+
+CMD		/start.sh

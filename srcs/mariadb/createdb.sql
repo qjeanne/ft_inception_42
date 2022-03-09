@@ -1,7 +1,7 @@
-CREATE DATABASE DVSGroupDB;
-CREATE USER 'dvs'@'%' IDENTIFIED BY 'password';
+CREATE DATABASE tjohnnieDB;
+CREATE USER 'tjohnnie'@'%' IDENTIFIED BY 'password';
 
-GRANT ALL PRIVILEGES ON DVSGroupDB.* TO 'dvs'@'%';
+GRANT ALL PRIVILEGES ON tjohnnieDB.* TO 'tjohnnie'@'%';
 FLUSH PRIVILEGES;
 
 ALTER USER 'root'@'localhost' IDENTIFIED BY '12345';
