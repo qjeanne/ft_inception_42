@@ -10,7 +10,7 @@ volumes:
                 driver: local
                 driver_opts:
                         device: /home/tjohnnie/data/wordpress
-                        j: bind
+                        o: bind
                         type: none
         mariadb:
                 name: mariadb
@@ -23,7 +23,7 @@ volumes:
 services:
         nginx:
                 depends_on:
-                        -wordpress
+                        - wordpress
                 container_name: nginx_debian
                 build: ./nginx
                 image: nginx
