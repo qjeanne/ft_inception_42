@@ -1,7 +1,7 @@
 if ! [ -d "/var/www/wordpress/wp-config.php" ]; then
-    wp core config --dbhost=${DB_HOST} --dbname=${DB_NAME} --dbuser=${DB_USER} --dbpass=${DB_PASSWORD} --allow-root
-    wp core install --url=${DOMAIN_NAME} --title=${TITLE} --admin_user=${USER_NAME} --admin_password=${DB_ROOT_PASSWORD} --admin_email=${USER_ADMIN_EMAIL} --skip-email --allow-root
-    wp user create ${DB_USER} ${USER_EMAIL} --allow-root --role=subscriber --user_pass=${DB_PASSWORD}
+    wp core config --dbhost='tjohnnie' --dbname='tjohnnieDB' --dbuser='tjohnnie' --dbpass='password' --allow-root
+    wp core install --url='tjohnnie.42.fr' --title='TJOHNNIE' --admin_user='tjohnnie' --admin_password='password' --admin_email='kara.jenn.ti@gmail.com' --skip-email --allow-root
+    wp user create 'root' 'root@gmail.com' --allow-root --role=subscriber --user_pass='12345'
 fi
 
 /usr/sbin/php-fpm7.3 --nodaemonize
