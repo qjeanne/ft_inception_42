@@ -9,4 +9,4 @@ COPY ./createdb.sql /
 RUN service mysql start && mysql < createdb.sql
 RUN rm -f createdb.sql
 
-CMD /usr/bin/mysql_safe
+CMD /usr/bin/mysqld_safe
